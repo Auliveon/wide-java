@@ -24,6 +24,7 @@
         <spring.version>5.3.20</spring.version>
         <wide-java.version>0.1-DEV</wide-java.version>
         <hibernate.version>5.6.7.Final</hibernate.version>
+        <slf4j.version>1.7.36</slf4j.version>
     </properties>
 
 </project>
