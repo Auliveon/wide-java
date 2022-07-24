@@ -1,13 +1,12 @@
 package com.widejava.task.processor.service;
 
-import com.widejava.task.processor.constant.MavenCommand;
+import com.widejava.task.processor.constant.MavenCommandsEnum;
+import com.widejava.task.processor.wrapper.ProcessWrapper;
+import com.widejava.task.processor.wrapper.ProcessWrapperBuilder;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.InputStreamReader;
 
 @Service
 public class ExternalProjectTestService {
@@ -22,24 +21,9 @@ public class ExternalProjectTestService {
     }
 
     public void initTests(String projectName) {
-        log.debug("asdasd");
-        Process process = null;
-        BufferedReader br = null;
-        try {
-            ProcessBuilder processBuilder = new ProcessBuilder(MavenCommand.MAVEN_BASE.getCommand(), "-q", MavenCommand.MVN_TEST.getCommand());
-            processBuilder.directory(new File(workDirectory + "/" + projectName));
-            processBuilder.redirectErrorStream(true);
-            process = processBuilder.start();
-            br = new BufferedReader(new InputStreamReader(process.getInputStream()));
-            String line;
-            while ((line = br.readLine()) != null) {
-                System.out.println(line);
-            }
-            process.waitFor();
-        } catch (Exception e) {
-            throw new RuntimeException(e);
-        } finally {
-            process.destroy();
-        }
+        log.debug("Run test: {}", projectName);
+        ProcessWrapperBuilder processWrapperBuilder = new ProcessWrapperBuilder();
+        ProcessWrapper processWrapper = processWrapperBuilder.setWorkPath(workDirectory + "/" + projectName).setCommandsEnum(MavenCommandsEnum.TEST).build();
+        System.out.println(processWrapper.run());
     }
 }
