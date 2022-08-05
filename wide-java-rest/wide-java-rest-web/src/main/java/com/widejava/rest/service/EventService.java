@@ -15,7 +15,6 @@ public class EventService {
 
     @EventListener(ContextRefreshedEvent.class)
     public void onApplicationStart() {
-        System.out.println(23);
         externalProjectTestService.initTests("test-project");
     }
 }

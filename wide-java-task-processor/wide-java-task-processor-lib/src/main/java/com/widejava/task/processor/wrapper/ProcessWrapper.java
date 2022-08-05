@@ -7,7 +7,10 @@ import org.slf4j.LoggerFactory;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.InputStreamReader;
-import java.util.*;
+import java.util.Arrays;
+import java.util.Collection;
+import java.util.List;
+import java.util.Objects;
 import java.util.stream.Collectors;
 
 public class ProcessWrapper {
@@ -16,7 +19,7 @@ public class ProcessWrapper {
 
     private String workPath;
 
-    private List<Command> commands = new ArrayList<>();
+    private List<Command> commands;
 
     public ProcessWrapper(String workPath, List<Command> commands) {
         this.workPath = workPath;
@@ -26,7 +29,7 @@ public class ProcessWrapper {
     public String run() {
         log.debug("Running command: {}", Arrays.toString(transformCommands()));
         Process process = null;
-        String result = null;
+        String result;
         try {
             final String[] transformedCommands = transformCommands();
             final ProcessBuilder processBuilder = new ProcessBuilder(transformedCommands);
