@@ -32,6 +32,6 @@ public class ExternalProjectTestService {
         final ProcessWrapper processWrapper = processWrapperBuilder.setWorkPath(workDirectory + "/" + projectName)
                 .setCommandsEnum(MavenCommandsEnum.TEST).build();
         final String result = processWrapper.run();
-        System.out.println(RegexConstant.TEST_RESULT.getResult(result));
+        System.out.println(result);
     }
 }

@@ -1,0 +1,48 @@
+19:11:39,883 INFO  [stdout] (ServerService Thread Pool -- 92) [INFO] Scanning for projects...
+19:11:39,883 INFO  [stdout] (ServerService Thread Pool -- 92) [INFO]
+19:11:39,883 INFO  [stdout] (ServerService Thread Pool -- 92) [INFO] ----------------------< org.example:test-project >----------------------
+19:11:39,884 INFO  [stdout] (ServerService Thread Pool -- 92) [INFO] Building test-project realise
+19:11:39,884 INFO  [stdout] (ServerService Thread Pool -- 92) [INFO] --------------------------------[ jar ]---------------------------------
+19:11:39,884 INFO  [stdout] (ServerService Thread Pool -- 92) [INFO]
+19:11:39,884 INFO  [stdout] (ServerService Thread Pool -- 92) [INFO] --- maven-resources-plugin:3.0.2:resources (default-resources) @ test-project ---
+19:11:39,884 INFO  [stdout] (ServerService Thread Pool -- 92) [INFO] Using 'UTF-8' encoding to copy filtered resources.
+19:11:39,884 INFO  [stdout] (ServerService Thread Pool -- 92) [INFO] skip non existing resourceDirectory /home/savitsky/Java/projects/wildfly-20.0.0.Final/wide-java/projects/test-project/src/main/resources
+19:11:39,884 INFO  [stdout] (ServerService Thread Pool -- 92) [INFO]
+19:11:39,884 INFO  [stdout] (ServerService Thread Pool -- 92) [INFO] --- maven-compiler-plugin:3.8.0:compile (default-compile) @ test-project ---
+19:11:39,884 INFO  [stdout] (ServerService Thread Pool -- 92) [INFO] Nothing to compile - all classes are up to date
+19:11:39,884 INFO  [stdout] (ServerService Thread Pool -- 92) [INFO]
+19:11:39,884 INFO  [stdout] (ServerService Thread Pool -- 92) [INFO] --- maven-resources-plugin:3.0.2:testResources (default-testResources) @ test-project ---
+19:11:39,884 INFO  [stdout] (ServerService Thread Pool -- 92) [INFO] Using 'UTF-8' encoding to copy filtered resources.
+19:11:39,884 INFO  [stdout] (ServerService Thread Pool -- 92) [INFO] skip non existing resourceDirectory /home/savitsky/Java/projects/wildfly-20.0.0.Final/wide-java/projects/test-project/src/test/resources
+19:11:39,884 INFO  [stdout] (ServerService Thread Pool -- 92) [INFO]
+19:11:39,884 INFO  [stdout] (ServerService Thread Pool -- 92) [INFO] --- maven-compiler-plugin:3.8.0:testCompile (default-testCompile) @ test-project ---
+19:11:39,884 INFO  [stdout] (ServerService Thread Pool -- 92) [INFO] Nothing to compile - all classes are up to date
+19:11:39,884 INFO  [stdout] (ServerService Thread Pool -- 92) [INFO]
+19:11:39,884 INFO  [stdout] (ServerService Thread Pool -- 92) [INFO] --- maven-surefire-plugin:2.22.1:test (default-test) @ test-project ---
+19:11:39,884 INFO  [stdout] (ServerService Thread Pool -- 92) [INFO]
+19:11:39,884 INFO  [stdout] (ServerService Thread Pool -- 92) [INFO] -------------------------------------------------------
+19:11:39,884 INFO  [stdout] (ServerService Thread Pool -- 92) [INFO]  T E S T S
+19:11:39,884 INFO  [stdout] (ServerService Thread Pool -- 92) [INFO] -------------------------------------------------------
+19:11:39,884 INFO  [stdout] (ServerService Thread Pool -- 92) [INFO] Running org.example.AppTest
+19:11:39,884 INFO  [stdout] (ServerService Thread Pool -- 92) [ERROR] Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.02 s <<< FAILURE! - in org.example.AppTest
+19:11:39,884 INFO  [stdout] (ServerService Thread Pool -- 92) [ERROR] shouldAnswerWithTrue  Time elapsed: 0.016 s  <<< FAILURE!
+19:11:39,884 INFO  [stdout] (ServerService Thread Pool -- 92) org.opentest4j.AssertionFailedError: expected: <23> but was: <233>
+19:11:39,884 INFO  [stdout] (ServerService Thread Pool -- 92)   at org.example.AppTest.shouldAnswerWithTrue(AppTest.java:18)
+19:11:39,884 INFO  [stdout] (ServerService Thread Pool -- 92)
+19:11:39,884 INFO  [stdout] (ServerService Thread Pool -- 92) [INFO]
+19:11:39,884 INFO  [stdout] (ServerService Thread Pool -- 92) [INFO] Results:
+19:11:39,884 INFO  [stdout] (ServerService Thread Pool -- 92) [INFO]
+19:11:39,884 INFO  [stdout] (ServerService Thread Pool -- 92) [ERROR] Failures:
+19:11:39,884 INFO  [stdout] (ServerService Thread Pool -- 92) [ERROR]   AppTest.shouldAnswerWithTrue:18 expected: <23> but was: <233>
+19:11:39,884 INFO  [stdout] (ServerService Thread Pool -- 92) [INFO]
+19:11:39,884 INFO  [stdout] (ServerService Thread Pool -- 92) [ERROR] Tests run: 1, Failures: 1, Errors: 0, Skipped: 0
+19:11:39,884 INFO  [stdout] (ServerService Thread Pool -- 92) [INFO]
+19:11:39,884 INFO  [stdout] (ServerService Thread Pool -- 92) [INFO] ------------------------------------------------------------------------
+19:11:39,884 INFO  [stdout] (ServerService Thread Pool -- 92) [INFO] BUILD FAILURE
+19:11:39,884 INFO  [stdout] (ServerService Thread Pool -- 92) [INFO] ------------------------------------------------------------------------
+19:11:39,884 INFO  [stdout] (ServerService Thread Pool -- 92) [INFO] Total time:  1.193 s
+19:11:39,884 INFO  [stdout] (ServerService Thread Pool -- 92) [INFO] Finished at: 2022-08-06T19:11:39+03:00
+19:11:39,885 INFO  [stdout] (ServerService Thread Pool -- 92) [INFO] ------------------------------------------------------------------------
+19:11:39,885 INFO  [stdout] (ServerService Thread Pool -- 92) [ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.1:test (default-test) on project test-project: There are test failures.
+19:11:39,885 INFO  [stdout] (ServerService Thread Pool -- 92) [ERROR]
+19:11:39,885 INFO  [stdout] (ServerService Thread Pool -- 92) [ERROR]

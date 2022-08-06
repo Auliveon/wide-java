@@ -18,13 +18,12 @@ public enum RegexConstant {
         this.regex = regex;
     }
 
-    public Map<String, String> getResult(String value) {
-        final Map<String, String> result = new HashMap<>();
+    public String getResult(String value) {
+        String result = null;
         final Matcher matcher = Pattern.compile(regex).matcher(value);
         if (StringUtils.isNotBlank(value) && matcher.find()) {
-            Arrays.stream(matcher.group().split(",")).map(line -> line.split(":")).forEach(array -> result.put(
-                    StringUtils.trim(array[0]), StringUtils.trim(array[1])));
+            result=  matcher.group();
         }
-        return result;
+        return StringUtils.trim(result);
     }
 }
